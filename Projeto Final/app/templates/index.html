@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+   
+{% block conteudo %}
+
+   <!--Com as chaves duplas, é possivel referenciar uma variavel python dentro do codigo HTML-->
+
+    <form action="/calcular" method="POST">
+      <div class="container">
+          <div class="form-check d-flex justify-content-center">
+            <input class="form-check-input mb-3" type="radio" name="tipoImposto" id="anual" value="Anual" checked>
+            <label class="form-check-label col-md-3" for="anual" id="anual">
+              Anual 
+            </label>
+            <input class="form-check-input" type="radio" name="tipoImposto" id="mensal" value="Mensal">
+            <label class="form-check-label" for="mensal" id="mensal">
+              Mensal
+            </label>
+          </div>
+        <div class="mb-3 col-md-6 formulario">
+          <label for="rendaBruta" class="form-label">Renda Bruta</label>
+          <input type="number" class="form-control" name="RendaBruta" id="rendaBruta" placeholder="R$" required>
+        </div>
+        <div class="mb-3 col-md-6 formulario">
+          <label for="dependentes" class="form-label">Número de dependentes</label>
+          <input type="number" class="form-control" name="dependentes" id="dependentes" required>
+        </div>
+        <div class="mb-3 col-md-6 formulario">
+          <label for="ensino" class="form-label">Despesa com ensino</label>
+          <input type="number" class="form-control" name="ensino" id="ensino" placeholder="R$" required>
+        </div>
+        <div class="mb-3 col-md-6 formulario">
+          <label for="ensino" class="form-label">Despesa com pensão alimentícia</label>
+          <input type="number" class="form-control" name="pensaoAlimenticia" id="pensaoAlimenticia" placeholder="R$" required>
+        </div>
+        <div class="mb-3 col-md-6 formulario">
+          <label for="ensino" class="form-label">Despesa médica</label>
+          <input type="number" class="form-control" name="medica" id="medica" placeholder="R$" required>
+        </div>
+        <div class="mb-3 col-md-6 formulario">
+          <label for="ensino" class="form-label">Previdência Social (INSS)</label>
+          <input type="number" class="form-control" name="INSS" id="INSS" placeholder="R$" required>
+        </div>
+        <button type="submit" class="btn btn-primary d-flex justify-content-center" id="btn" value="enviar">Enviar</button>
+      </div>
+    </form>
+
+{% endblock %}

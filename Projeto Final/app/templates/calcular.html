@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <div class="resultado">
+        <h3>Calculo do IRPF</h3>
+    </div>
+        <div class="col-md-6 tabela ">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Tipo de entrada</th>
+                    <th scope="col">Preço</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td scope="row">Tipo do Imposto</td>
+                    <td>{{tipoImposto}}</td>
+                </tr>
+                <tr>
+                    <td scope="row">Renda Bruta</td>
+                    <td>R$ {{rendaBruta}}</td>
+                </tr>
+                <tr>
+                    <td scope="row">Dependentes</td>
+                    <td>{{dependentes}}</td>
+                </tr>
+                <tr>
+                    <td scope="row">Gastos com Ensino</td>
+                    <td>R$ {{ensino}}</td>
+                </tr>
+                <tr>
+                    <td scope="row">Gastos com Pensão Alimentícia</td>
+                    <td>R$ {{pensao}}</td>
+                </tr>
+                <tr>
+                    <td scope="row">Gastos com Despesas Médicas</td>
+                    <td>R$ {{medica}}</td>
+                </tr>
+                <tr>
+                    <td scope="row">Gastos com INSS</td>
+                    <td>R$ {{INSS}}</td>
+                </tr>
+                <tr>
+                    <td scope="row">Renda Liquida</td>
+                    <td>R$ {{rendaLiquida}}</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <td scope="row">Valor a Pagar: </td>
+                    <td>R$ {{Imposto}}</td>
+                </tfoot>
+            </table>
+        </div>
+{% endblock %}
